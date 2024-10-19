@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup - ParkPro</title>
+    <link rel="stylesheet" href="park3.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+       
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('https://img.freepik.com/free-photo/long-empty-footpath-modern-city-square-with-skyline_1112-1846.jpg?w=996&t=st=1726241614~exp=1726242214~hmac=ef6a3dd604f900733415d069e6314960421ac66acfd95253930245f087d06ad1') no-repeat center center/cover;
+      
+        }
+        .input-box{
+            width:400px;
+            max-width: 90%;
+            position: relative;
+        }
+        .input-box input{
+            width: 100%;
+            height: 60px;
+            padding: 0 20px;
+            border: 1px solid #ccc;
+            outline:none;
+            color: #fff;
+            background: transparent;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height:min-content;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color:violet; 
+        }
+        #e-message{
+            position:absolute;
+            bottom:-30px;
+            color: #fff;
+            font-size: 15px;
+            display: none;
+
+        }
+        #message{
+            position:absolute;
+            bottom:-30px;
+            color: #fff;
+            font-size: 15px;
+            display: none;
+
+        }
+       ::placeholder{
+        font-size: 15px;
+       } 
+
+        .form {
+            background-color: #fff;
+            padding: 2rem;
+            max-width: 400px;
+            width: 90%;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+        }
+
+        .form-title {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            font-weight: 600;
+            text-align: center;
+            color: #cf08ab;
+            margin-bottom: 1rem;
+        }
+
+        .input-container {
+            position: relative;
+            width: 60%;
+            max-width: 160%;
+            margin-bottom: 1rem;
+            padding-right: 65px;
+        }
+
+        .input-container input, .form button {
+            outline: none;
+            border: 1px solid #e5e7eb;
+            width: 100%;
+        }
+
+        .input-container input {
+            background-color: #fff;
+            padding: 1rem;
+            padding-right: 3rem;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .input-container span {
+            display: grid;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            place-content: center;
+        }
+
+        .input-container span svg {
+            color: #9CA3AF;
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .submit {
+            display: block;
+            padding: 0.75rem;
+            background-color: violet;
+            color: #ffffff;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 500;
+            width: 60%;
+            border-radius: 0.5rem;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+
+       
+        .signup-link {
+            color: #6B7280;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .signup-link a {
+            text-decoration: none;
+            font-size: medium;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+          
+          
+    <form class="form">
+        <p class="form-title">Sign up to your account</p>
+        <div class="input-container">
+            <input placeholder="Enter First Name" type="text">
+            
+        </div>
+        <div class="input-container">
+            <input placeholder="Enter Last Name" type="text">
+            
+        </div>
+        <div class="input-container">
+            <input placeholder="age" type="number">
+            
+        </div>
+        <div class="input-container">
+            <input placeholder="Enter Phone number" type="phone number">
+            
+        </div>
+        <div class="input-container">
+            <input placeholder="Enter vehicle type" type="text">
+           
+
+
+            </select>
+            
+        </div>
+        <div class="input-container">
+            <input placeholder="Enter Your Vehicle Plate number" type="">
+            
+        </div>
+
+
+
+        <div class="input-container">
+            <input placeholder="Enter email" type="email">
+            
+        </div>
+       
+        <div class="input-container">
+            <input  id="password" placeholder="Enter Password" type="password">
+            <div>
+            <p id="message"><span id="strenght"></span> </p>
+        </div>
+        </div>
+    
+        <button class="submit" type="submit">Sign in</a></button>
+
+        <p class="signup-link">
+            
+           <a href="login.html">Already have an account?</a> 
+           
+            <a href="login.html">Sign in</a>
+        </p>
+    </form>
+</div>
+</body>
+</html>

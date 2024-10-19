@@ -1,0 +1,585 @@
+<html>
+<head>
+    <title>ParkIn - Online Parking Booking Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: #f9f9f9; 
+}
+
+
+.navbar .logo {
+    font-size: 25px;
+    font-weight: 700;
+    transition: transform 0.7s ease; 
+}
+
+
+.navbar .logo:hover {
+    transform: scale(1.8);
+}
+
+.navbar .logo span {
+    color: #ec07f4;
+    transition: color 0.7s ease;
+}
+
+
+.navbar .logo span:hover {
+    color: #ab03b1;
+}
+
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    
+}
+
+
+.navbar ul li {
+    margin: 0 15px;
+    transition: transform 0.7s ease;
+}
+
+
+.navbar ul li:hover {
+    transform: translateY(-5px); 
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.7s ease; 
+}
+
+
+.navbar ul li a:hover {
+    color: #ec07f4;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ec07f4;
+    bottom: -10px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+
+.navbar ul li a:hover::before {
+    width: 100%;
+}
+
+   .search-section {
+            background-color: #f8f9fa;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .search-section input, .search-section select, .search-section button {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-section button {
+            background-color:#f105f5;
+            color: white;
+            border: none;
+        }
+        .parking-area {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .parking-area h2 {
+            margin-bottom: 20px;
+        }
+        .parking-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .parking-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: left;
+        }
+        .parking-card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .parking-card button {
+            background-color: #f105f5;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .container-4 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .image-section {
+            flex: 1;
+            text-align: center;
+        }
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content-section {
+            flex: 1;
+            padding: 20px;
+        }
+        .content-section h1 {
+            font-size: 36px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        .content-section p {
+            font-size: 16px;
+            color: #666666;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .input-group input {
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+        .input-group button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffffff;
+            background-color:  #f105f5;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .store-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .store-buttons img {
+            height: 40px;
+        }
+        .pricing {
+            display: flex;
+            justify-content: space-between;
+            margin-top: -50px;
+        }
+        .pricing .card {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 48%;
+        }
+        .pricing .card h2 {
+            background-color:  #f105f5;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 24px;
+        }
+        .pricing .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .pricing .card ul li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .pricing .card ul li i {
+            color: #f105f5;
+            margin-right: 10px;
+        }
+        .pricing .card .price {
+            font-size: 32px;
+            color: #f105f5;
+            margin: 20px 0;
+        }
+        .pricing .card .book-btn {
+            background-color: #f105f5;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        .btn {
+            background-color: #f105f5;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .btn a {
+            display: inline-block;
+            /* margin-top:0 10px;
+            padding: 10px; */
+            border: 1px solid  #f105f5;
+            color:white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #1a1a1a;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer .column {
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+            padding: 0 20px;
+        }
+        .footer h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .footer p {
+            font-size: 14px;
+            color: #999;
+        }
+        .footer a {
+            color:  #f105f5;
+            text-decoration: none;
+        }
+        .footer .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f105f5;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            color: #f105f5;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+        .footer .bottom-bar {
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+        .footer .bottom-bar p {
+            margin: 0;
+            font-size: 14px;
+            color: #999;
+        }
+        .footer .bottom-bar a {
+            color: #999;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .footer h3{
+            color: #f9f5f5;
+        }
+        </style>
+</head>
+<body>
+ 
+    <div class="navbar">
+        <div class="logo">
+         Park
+         <span>
+          Pro
+         </span>
+        </div>
+        <ul>
+         <li>
+          <a href="parkin.html">
+           Home
+          </a>
+         </li>
+         <li>
+          <a href="about.html">
+           About
+          </a>
+         </li>
+         <li>
+          <a href="parking.html">
+           Parking
+          </a>
+         </li>
+         
+        
+         <li>
+          <a href="service.html">
+           Careers
+          </a>
+         </li>
+         <li>
+          <a href="contact.html">
+           Contact Us
+          </a>
+         </li>
+       
+        
+         
+        </ul>
+       
+        
+            
+            
+          
+          
+        </div>
+    <div class="search-section">
+        <h2>Enter your location</h2>
+        <select>
+            <option>Baton Rouge, LA</option>
+        </select>
+        <input type="date" value="2020-05-10">
+        <input type="date" value="2020-05-15">
+        <input type="time" value="10:00">
+        <input type="time" value="12:00">
+        <button>Search Parking Spaces</button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- <div class="parking-area">
+        <h2>Parking Area Near You</h2>
+        <div class="parking-cards">
+            <div class="parking-card">
+                <img src="valet park.jpeg" alt="Parking Image">
+                <p>102 St. Main Valey</p>
+                <p><i class="fas fa-map-marker-alt"></i> 100 meters</p>
+                <p>$8.00</p>
+                <button>Book Now</button>
+                <a href="#">View Details</a>
+            </div>
+            <div class="parking-card">
+                <img src="event park.jpeg" alt="Parking Image">
+                <p>202 St. Down Valey</p>
+                <p><i class="fas fa-map-marker-alt"></i> 110 meters</p>
+                <p>$8.00</p>
+                <button>Book Now</button>
+                <a href="#">View Details</a>
+            </div>
+            <div class="parking-card">
+                <img src="parking.jpg" alt="Parking Image">
+                <p>401 St. Main Valey</p>
+                <p><i class="fas fa-map-marker-alt"></i> 120 meters</p>
+                <p>$9.00</p>
+                <button>Book Now</button>
+                <a href="#">View Details</a>
+            </div>
+            <div class="parking-card">
+                <img src="airpot park.jpeg" alt="Parking Image">
+                <p>403 St. Down Valey</p>
+                <p><i class="fas fa-map-marker-alt"></i> 110 meters</p>
+               
+                <button>Book Now</button>
+                <a href="#">View Details</a>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="pricing">
+                <div class="card">
+                    <h2>Hourly Parking</h2>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>Available 24 Hr</li>
+                        <li><i class="fas fa-check-circle"></i>Over Night Parking</li>
+                        <li><i class="fas fa-check-circle"></i>Secure Lockup Garage</li>
+                        <li><i class="fas fa-check-circle"></i>Park At Airport & Station</li>
+                        <li><i class="fas fa-check-circle"></i>Best Seamless Experience</li>
+                    </ul>
+                    <div class="price">$15.00 for 1 Hour</div>
+                    <button class="btn"><a href="parking.html">
+                      Book Now
+                     </a>
+                    </button>
+                </div>
+                <div class="card">
+                    <h2>Day Parking</h2>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>Available 24 Hr</li>
+                        <li><i class="fas fa-check-circle"></i>Over Night Parking</li>
+                        <li><i class="fas fa-check-circle"></i>Secure Lockup Garage</li>
+                        <li><i class="fas fa-check-circle"></i>Park At Airport & Station</li>
+                        <li><i class="fas fa-check-circle"></i>Best Seamless Experience</li>
+                    </ul>
+                    <div class="price">$24.00 for 1 Day</div>
+                    <button class="btn"><a href="parking.html">
+                      Book Now
+                     </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="pricing">
+                <div class="card">
+                    <h2>Weekly Parking Lots</h2>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>Available 24 Hr</li>
+                        <li><i class="fas fa-check-circle"></i>Over Night Parking</li>
+                        <li><i class="fas fa-check-circle"></i>Secure Lockup Garage</li>
+                        <li><i class="fas fa-check-circle"></i>Park At Airport & Station</li>
+                        <li><i class="fas fa-check-circle"></i>Best Seamless Experience</li>
+                    </ul>
+                    <div class="price">$75.00 for 1 Week</div>
+                    <button class="btn"><a href="parking.html">
+                      Book Now
+                     </a>
+                    </button>
+                </div>
+                <div class="card">
+                    <h2>Monthly Parking</h2>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i>Available 24 Hr</li>
+                        <li><i class="fas fa-check-circle"></i>Over Night Parking</li>
+                        <li><i class="fas fa-check-circle"></i>Secure Lockup Garage</li>
+                        <li><i class="fas fa-check-circle"></i>Park At Airport & Station</li>
+                        <li><i class="fas fa-check-circle"></i>Best Seamless Experience</li>
+                    </ul>
+                    <div class="price">$300.00 for 1 Month</div>
+                    <button class="btn"><a href="parking.html">
+                      Book Now
+                     </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    <div class="container-4">
+        <div class="image-section">
+         <img alt="Illustration of a person standing next to a car with a map in the background" height="400" src="park app img.png" width="600"/>
+        </div>
+        <div class="content-section">
+         <h1>
+          Download The Parkin Parking App
+         </h1>
+         <p>
+            The app provides real-time information on available parking spaces, allowing users to book spots in advance, navigate directly to their selected location, and pay through a secure, cashless system</p>
+         <p>
+            This app aims to reduce parking-related stress, save time, and provide a more efficient urban mobility experience.
+         </p>
+         <div class="input-group">
+          <input placeholder="Enter your mobile number" type="text"/>
+          <button>
+           Send Link
+          </button>
+         </div>
+         <div class="store-buttons">
+          <img alt="Get it on Google Play" height="40" src="get goo ply.png" width="150"/>
+          
+         </div>
+        </div>
+       </div>
+       <div class="footer">
+        <div class="column">
+            <h3>Do You Have Any Queries Regarding Our Pricing?</h3>
+            <a href="#" class="btn">SEND INQUIRY</a>
+            <p>Our team will respond to your inquiries within 48 hours</p>
+        </div>
+        <div class="column">
+            <h3>Do You Have Any Questions And Want To Contact Us?</h3>
+            <p><a href="tel:+9500643892">Feel Free To Call Us</a></p>
+            <p><i class="fas fa-phone-alt"></i> +91 9500643892</p>
+            <p>123 Megbee St,<br>Coimbatore, S 00002, India</p>
+        </div>
+        <div class="column">
+            <h3>Parkin Working Hours</h3>
+            <p>Monday - Friday<br>09:00 AM - 10:30 PM</p>
+            <p>Saturday - Sunday<br>09:00 AM - 7:00 PM</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>© 2020 All rights reserved.</p>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms&Conditions</a>
+        </div>
+    </div>
+       
+        
+       
+     </body></html>
+     

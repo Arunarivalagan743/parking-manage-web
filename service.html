@@ -1,0 +1,615 @@
+
+<html>
+ <head>
+  <title>
+   ParkIn Services
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    
+}
+
+
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+    background-color: #f9f9f9; 
+}
+
+
+.navbar .logo {
+    font-size: 25px;
+    font-weight: 700;
+    transition: transform 0.7s ease; 
+}
+
+
+.navbar .logo:hover {
+    transform: scale(1.8);
+}
+
+.navbar .logo span {
+    color: #ec07f4;
+    transition: color 0.7s ease;
+}
+
+
+.navbar .logo span:hover {
+    color: #ab03b1;
+}
+
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    
+}
+
+
+.navbar ul li {
+    margin: 0 15px;
+    transition: transform 0.7s ease;
+}
+
+
+.navbar ul li:hover {
+    transform: translateY(-5px); 
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.7s ease; 
+}
+
+
+.navbar ul li a:hover {
+    color: #ec07f4;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #ec07f4;
+    bottom: -10px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+
+.navbar ul li a:hover::before {
+    width: 100%;
+}
+
+   .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .banner img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .banner .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .banner h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+        .hero {
+            background-image: url('park pay2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .hero h1 {
+            margin: 0;
+            font-size: 50px;
+        }
+        .breadcrumb {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .breadcrumb a {
+            color:#f105f5;
+            text-decoration: none;
+        }
+        .services-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .services-section h2 {
+            color:#f105f5;
+            margin-bottom: 20px;
+        }
+        .services-section .service-cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .service-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            width: 300px;
+            text-align: left;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .service-card img {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+        .service-card .card-content {
+            padding: 20px;
+        }
+        .service-card .card-content h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .service-card .card-content p {
+            margin: 0 0 20px;
+            color: #666;
+        }
+        .service-card .card-content .btn {
+            background-color:#f105f5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .quote-section {
+            background-image: url('quote 2.jpeg');
+            background-size: cover;
+            background-position: center;
+            padding: 50px 0;
+            text-align: center;
+            color: white;
+        }
+        .quote-section  .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .quote-section .banner img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .quote-section .banner .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .quote-section .quote-form {
+            background-color: rgba(244, 10, 220, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+        .quote-section .quote-form input,
+        .quote-section .quote-form select,
+        .quote-section .quote-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        .quote-section .quote-form .btn {
+            background-color: #f105f5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .features-section {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+        .features-section .feature {
+            display: inline-block;
+            width: 30%;
+            padding: 20px;
+        }
+        .features-section .feature i {
+            font-size: 50px;
+            color:#f105f5;
+            margin-bottom: 20px;
+        }
+        .features-section .feature h3 {
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+        .features-section .feature p {
+            color: #666;
+        }
+        .features-section .feature a {
+            background-color:#f105f5;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+       
+        .footer {
+            background-color: #1a1a1a;
+            padding: 40px 0;
+            text-align: center;
+        }
+        .footer .column {
+            display: inline-block;
+            width: 30%;
+            vertical-align: top;
+            padding: 0 20px;
+        }
+        .footer h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .footer p {
+            font-size: 14px;
+            color: #999;
+        }
+        .footer a {
+            color:  #f105f5;
+            text-decoration: none;
+        }
+        .footer .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #f105f5;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        .footer .social-icons {
+            margin-top: 20px;
+        }
+        .footer .social-icons a {
+            color: #f105f5;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+        .footer .bottom-bar {
+            margin-top: 40px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+        .footer .bottom-bar p {
+            margin: 0;
+            font-size: 14px;
+            color: #999;
+        }
+        .footer .bottom-bar a {
+            color: #999;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .footer h3{
+            color: #f9f5f5;
+        }
+  </style>
+ </head>
+ <body>
+    
+  <div class="navbar">
+    <div class="logo">
+     Park
+     <span>
+      Pro
+     </span>
+    </div>
+    <ul>
+     <li>
+      <a href="parkin.html">
+       Home
+      </a>
+     </li>
+     <li>
+      <a href="about.html">
+       About
+      </a>
+     </li>
+     <li>
+      <a href="parking.html">
+       Parking
+      </a>
+     </li>
+     
+    
+     <li>
+      <a href="service.html">
+       Careers
+      </a>
+     </li>
+     <li>
+      <a href="contact.html">
+       Contact Us
+      </a>
+     </li>
+    
+     
+    </ul>
+   
+    
+        
+        
+      
+      
+    </div>
+       <div class="hero"> <h1>
+        Service
+         </h1></div>
+       <!-- <section class="banner">
+         <img alt="Banner Image" height="300" src="service img 3.jpeg" width="1200"/> 
+        <div class="overlay">
+         <h1>
+        Service
+         </h1>
+        </div>
+       </section> -->
+  <div class="services-section">
+   <h2>
+    ParkIn Services
+   </h2>
+   <h3>
+    Our Parking Services
+   </h3>
+   <div class="service-cards">
+    <div class="service-card">
+     <img alt="Self Parking"  height="200" src="service img 2.jpg" width="300"/>
+     <div class="card-content">
+      <h3>
+       Self Parking
+      </h3>
+      <p>
+       Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      </p>
+      <a class="btn" href="parking.html">
+       Book Now
+      </a>
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Valet Parking" height="200" src="valet park.jpeg" width="300"/>
+     <div class="card-content">
+      <h3>
+       Valet Parking
+      </h3>
+      <p>
+       Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      </p>
+      <a class="btn" href="parking.html">
+       Book Now
+      </a>
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Garage Parking" height="200" src="garage park.jpg" width="300"/>
+     <div class="card-content">
+      <h3>
+       Garage Parking
+      </h3>
+      <p>
+       Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      </p>
+      <a class="btn" href="parking.html">
+       Book Now
+      </a>
+     </div>
+    </div>
+    <div class="service-card">
+     <img alt="Airport Parking" height="200" src="garage park.jpg" width="300"/>
+     <div class="card-content">
+      <h3>
+       Airport Parking
+      </h3>
+      <p>
+       Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      </p>
+      <a class="btn" href="parking.html">
+       Book Now
+      </a>
+     </div>
+    </div>
+    
+    <div class="service-card">
+     <img alt="Events Parking" height="200" src="event park.jpeg" width="300"/>
+     <div class="card-content">
+      <h3>
+       Events Parking
+      </h3>
+      <p>
+       Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+      </p>
+      <a class="btn" href="parking.html">
+       Book Now
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="quote-section">
+    
+   <div class="quote-form">
+    <h2>
+     Request For Quote
+    </h2>
+    <input placeholder="Your Name" type="text"/>
+    <input placeholder="Email Address" type="email"/>
+    <select>
+     <option>
+      Choose Service
+     </option>
+     <option>
+      Self Parking
+     </option>
+     <option>
+      Valet Parking
+     </option>
+     <option>
+      Garage Parking
+     </option>
+     <option>
+      Airport Parking
+     </option>
+     <option>
+      Monthly Parking
+     </option>
+     <option>
+      Events Parking
+     </option>
+    </select>
+    <select>
+     <option>
+      Monthly
+     </option>
+     <option>
+      Weekly
+     </option>
+     <option>
+      Daily
+     </option>
+    </select>
+    <textarea placeholder="Your Message"></textarea>
+    <a class="btn" href="#">
+     Get A Quote
+    </a>
+   </div>
+  </div>
+  <div class="features-section">
+   <div class="feature">
+    <i class="fas fa-clock">
+    </i>
+    <h3>
+     24hr Services
+    </h3>
+    <p>
+     Sed ut perspiciatis unde omnis iste natus error sit volup.
+    </p>
+    <a href="login.html">
+     Register Now
+    </a>
+   </div>
+   <div class="feature">
+    <i class="fas fa-users">
+    </i>
+    <h3>
+     Expert Team
+    </h3>
+    <p>
+     Sed ut perspiciatis unde omnis iste natus error sit volup.
+    </p>
+    <a href="contact.html">
+     Contact Us
+    </a>
+   </div>
+   <div class="feature">
+    <i class="fas fa-headset">
+    </i>
+    <h3>
+     Excellent Support
+    </h3>
+    <p>
+     Sed ut perspiciatis unde omnis iste natus error sit volup.
+    </p>
+    <a href="service.html">
+     Help &amp; Support
+    </a>
+   </div>
+  </div>
+ 
+  <div class="footer">
+    <div class="column">
+        <h3>Do You Have Any Queries Regarding Our work?</h3>
+        <a href="#" class="btn">SEND INQUIRY</a>
+        <p>Our team will respond to your inquiries within 24 hours</p>
+    </div>
+    <div class="column">
+        <h3>Do You Have Any Questions And Want To Contact Us?</h3>
+        <p><a href="tel:+9500643892">Feel Free To Call Us</a></p>
+        <p><i class="fas fa-phone-alt"></i> +91 9500643892</p>
+        <p>123 Megbee St,<br>Coimbatore, S 00002, India</p>
+    </div>
+    <div class="column">
+        <h3>Parkin Working Hours</h3>
+        <p>Monday - Friday<br>09:00 AM - 10:30 PM</p>
+        <p>Saturday - Sunday<br>09:00 AM - 7:00 PM</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </div>
+    <div class="bottom-bar">
+        <p>© 2020 All rights reserved.</p>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms&Conditions</a>
+    </div>
+</div>
+ </body>
+</html>

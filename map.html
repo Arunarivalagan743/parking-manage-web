@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Park Space Booking</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <style>
+        #map {
+            height: 100%;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Park Space Booking</h2>
+    <div id="map" style="height:500px;width:100%;"></div>
+    <script>
+        function initMap() {
+            // Define the default park location (latitude, longitude)
+            var parkLocation = { lat: 40.730610, lng: -73.935242 }; // New York as an example
+
+            // Create a new map centered at the default park location
+            var map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 14,
+                center: parkLocation
+            });
+
+            // Place a marker at the default park location
+            var marker = new google.maps.Marker({
+                position: parkLocation,
+                map: map,
+                title: 'Default Park Space'
+            });
+
+            // Add a click event to allow users to book
+            google.maps.event.addListener(marker, 'click', function() {
+                alert('Booking this park space!');
+                // You can trigger a booking form or action here
+            });
+        }
+
+        // Load the map when the page loads
+        window.onload = initMap;
+    </script>
+</body>
+</html>
